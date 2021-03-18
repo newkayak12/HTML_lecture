@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
+    <!-- url에서는 띄어쓰기를 +로 쓰니까 -->
+</head>
+<body>
+    <h3 class="defaultFont">글꼴 설정 적용하기</h3>
+    <h2>글꼴 적용하기</h2>
+
+    <pre style="font-weight: bold;">
+        웹폰트를 이용해서 페이즐 열 때 글꼴을 가져와서 사용하게 할 수 있음
+        네트워크 통신이 가능하면 서버에서 보낸 폰트를 받아서 글꼴을 사용
+    </pre>
+    <div id="content" style="font-size: 20px;">
+        <p>기본글꼴로 출력하기</p>
+        <p id="fam1">1. 배달의 민족체 2. 궁서체로 출력하기</p>
+
+        <p class="bolder">안녕하세요 저는 굵기 조정할겁니다.</p>
+        <p class="bold">안녕하세요 저는 굵기 조정할겁니다.</p>
+        <p >안녕하세요 저는 굵기 조정할겁니다.</p>
+        <p class="lighter">안녕하세요 저는 굵기 조정할겁니다.</p>
+
+        <p style="font-size: 2rem;">영문자 MemberLevel</p>
+        <p class="variant">영문자 MemberLevel_smallCap</p>
+        <p class="variant2">영문자 MemberLevel_initial</p>
+        <p class="all">전체 글꼴 스타일 한 번에 적용하기 today class finish!</p>
+
+
+    </div>  
+
+    <style>
+        .all{
+            font: italic small-caps bolder 30px "Gugi";
+        }
+        .variant2{
+            font-variant: initial;
+            font-style: oblique;
+        }
+        .variant{
+            font-variant: small-caps;
+            font-style: italic;
+        }
+        .lighter{
+            font-weight: lighter;
+        }
+        .bolder{
+            font-weight: bolder;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .defaultFont{
+            font-family:"Black And White Picture",  "Gugi";
+            font-weight: "bolder";
+        }
+        #content>p#fam1{ /* p#fam1  #fam1인 p태그*/
+            font-family: "Gugi","배달의민족 도현", "궁서체";
+            /* 여기에서는 +를 띄어쓰기로 바꿔줘야한다. egDo+hyun > Do hyun */
+            font-size: 16px;
+        }
+        #content>p:first-child{
+            font-size:2em; /* 상대 크기>> 2배율 32px */
+        }
+        *{
+            font-size: 30px;
+        }
+    </style>
+</body>
+</html>

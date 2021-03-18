@@ -1,0 +1,152 @@
+<!DOCTYPE html> <!--주석을 쓸 수 있다. / 페이지의 타입을 선언한다. html5로 -->
+            
+    <html lang = "ko"> <!-- 페이지의 시작은 html으로  설정을 안 하면 system default로-->
+
+    <!-- head 태그와 body 태그로 구성이 되어있다.-->
+
+
+
+        <head> 
+
+                <!-- 페이지에 대한 주요 정보를 설정한다.
+                    외부에서 불러올 파일, script, css에 대한 설정, 페이지 작성환경, 저작자, 타이틀 등을 작성한다.-->
+
+                <!-- 메타 테그 : 속성명과 속성 내용을 답고 있다. -->
+
+                <!-- http-equiv 는 메타 요소에 정의된 명령을 먼저 실행 후 페이지를 로드
+                    content-type mime설정 > 윈도우에서 보면 확장자 같은... 뭘로 만들었는지
+                    X-ua-compatiable : 반응형 때문에 나온 녀석 : 환경에서 어떤 버젼에 맞춰서 해석해라 이런식으로
+                    refresh : 리로드하는 것  자동으로 페이지 이동 eg) 5분 후에 자동으로 이동합니다.
+                    content -script -type javascript 등등 스크립트 설정 잡아주는 : 요즘은 자동으로 잡아줌 -->
+
+                <!-- http-equiv와 같은 의미인데 
+                    얘는 진짜 정보임... 그냥 이름이 뭐고 누가 만들었고, 이 페이지가 뭘 표시하냐
+                    robot은 크롤러가 어디까지 할 수 있냐 -->
+
+
+                <!-- 메타태그 이용하기 -->
+
+                    <!--메타 태그는 페이지에 대한 기본 정보를 설정한다.  -->
+
+                    <!-- 페이지의 기본 언어를 설정 -->
+                    <meta http-equiv = "content-languiage" content = "ko" />
+                    <!-- 페이지의 문자형식, 페이지 형식을 지정 -->
+
+                    <meta http-equiv = "content-type" content = "text/html"; charset=utf-8 />
+                    <!-- 텍스트인데 html이야 인코딩은  utf-8이야   content는 알아서 잡는데 인코딩은 우리가 잡아줘야하는 경우가 많아서...-->
+
+                    <!-- 문자열 인코딩은? -->
+
+                    <meta charset = "utf-8 "/>
+                    <!-- 인코딩 잘못되면 깨지겠죠?? -->
+
+
+                <!-- 페이지 자동으로 이동하는 옵션  -->
+                    <!-- <meta http-equiv = "refresh" content = "3;http://www.iei.or.kr"/> -->
+
+                    <!-- 이거 말고도 여러 가지 옵션값이 있으니까 찾아보는 걸로 합시다..책 볼게 하나 또 늘었네? -->
+
+
+
+
+                <!-- meta 태그에서 name 속성 : 페이지에대한 기본 정보-->
+                    <meta name = "application-name" content = "html struct"/>
+                    <meta name = "author" content = "ksh"/>
+                        <!-- 작성자 -->
+                    <meta name = "description"  content = "html 기본 구조"/>
+                        <!-- 설명 -->
+                    <meta name = "generator" content = "vsCode" />
+                        <!-- 뭘로 작성했는지 -->
+                    <meta name = "keywords" content = "web, html, html5"/>
+                        <!-- 인스타 태그 같은 녀석임 keyword는 -->
+
+                
+
+
+                <!-- 반응형 적용 속성 -->
+                        <meta name = "viewport" content = "width = device-width, initial-scale=1.0"/>
+
+                <!-- 페이지 제목을 설정하기 : 탭의 제목  >> title태그  -->
+                        <title> 나의 첫 HTML PAGE </title>
+                        
+                            <!-- 외부 파일(CSS:스타일)을 불러와서 적용하기! >> link 태크// 얘로 파비콘을 만들 수도 있어요 -->
+
+                        <link rel="stylesheet" type="text/css" href = "test.css"/>
+                            <!-- link relation(관계) type(어떤 타입인지)   href(참조) = 경로 혹은 외부 파일--> 
+                            <!-- 외부파일이랑 링크했다... 이런식이라  -->
+                            <!-- 에러가 표시 안됩니다... 찾기 어렵네요 개발자 도구 -> 콘솔로가서 확인 -->
+
+
+                            <!-- 파비콘 설정하기  -->
+                        <link rel= "icon" type= "image/x-icon" herf= "https://www.iei.or.kr/khfavicon.ico">
+                        <!-- <link rel="icon" type="image/x-icon" href="https://www.iei.or.kr/khfavicon.ico"/>  아님.. 오타 !!-->
+                        
+
+                <!-- 스크립트를 작성하는 태그 -->
+                    
+                    <!--  자바스크립트 -->
+                        <script> // 자바 스크립트 구분을 작성하는 부분 > 얘는 꼭 head태그 안에 있어야하는 것은 아님 
+                            // alert('안녕 내가 스크립트야!');
+                        </script>
+
+                        <!--    외부에 저장되어있는 스크립트 파일을 불러오는 것 -->
+                        <!-- <script src="testscript.js"> </script> -->
+
+                <!-- 스타일을 작성하는 태그 -->
+
+                    <!--     css -->
+                        <style>
+                                p{
+                                    color: skyblue;
+                                    background-color :tomato;
+                                }
+                            /*  css구문이 들어가는 곳 */
+                        </style>
+                
+                
+                <!-- base태그 : root경로를 변경할 수 있음 -->
+                    
+                        <base href = "http://www.naver.com"/>
+                      <!-- 하이퍼링크 베이스 경로 -->
+                      <!-- 만약 없다면 디폴트 경로에서 찾는다.  -->
+
+
+        </head>
+<!-- 헤더는 주로 정보를 담고 있죠...! -->
+
+
+
+
+
+
+
+        <body> 
+            <!-- 페이지에서 출력할 내용을 작성
+                브라우저 화면에 출력된 내용, 
+                text, 동영상 음악, 이미지 등등등! -->
+
+                <h1> 
+                    3초 후, 변경된 페이지로 이동합니다.
+                </h1>
+
+                <p>html 잘 배워보자구요</p>
+                <a href = test.do> base 연결 </a>
+            
+
+
+
+
+
+
+
+            <!-- body -->
+            <!-- h테그...  제목을 입력할 때 사용하는 태그로 폰트의 크기가 태그마다 정해져있음-->
+            <!-- 용어가 신문이랑 비슷하다고 -->
+            
+            <!-- h1 첫 번째로 큰 제목, h2 두 번쨰로.......h6 -->
+            
+
+        </body>
+
+
+</html>

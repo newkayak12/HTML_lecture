@@ -1,0 +1,324 @@
+<!-- table tage -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>테이블태그 알아보기</title>
+    </head>
+    <body>
+        <h1>태이블 태그 활용하기</h1>
+
+        <table border="1">
+            <tr><!-- 행 -->
+                <td>1행 1열</td><!-- 열 -->
+                <td>1행 2열</td>
+                <td>1행 3열</td>
+            </tr>
+
+            <tr><!-- 행 -->
+                <td>2행 1열</td>
+                <td>2행 2열</td>
+                <td>2행 3열</td>
+            </tr>
+
+            <tr>
+                <td>3행 1열</td>
+                <td>3행 2열</td>
+                <td>3행 3열</td>
+            
+            </tr>
+
+            <!-- 기본적으로는 테이블에 라인이 없는데 라인을 그리는... -->
+            <!-- 
+                방법 1. 테이블 속성으로
+                    2. CSS로 
+            -->
+        </table>
+
+
+
+
+
+    <br>
+
+    <h2>음식</h2>
+
+        <table border= "1" width = "300" height ="50">
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;음식명&nbsp;</td>
+                <td>&nbsp;가&nbsp;격&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>한식</td>
+                <td>비빔밥</td>
+                <td>9000</td>
+            </tr>
+            <tr>
+                <td>양식</td>
+                <td>스테이크</td>
+                <td>59000</td>
+            </tr>
+        </table>
+    <!-- 
+        db에서 가져온 데이터를 출력할 때 많이 사용 
+        회원 테이블에서 이름, 나이, 성별을 가져옴
+        -->
+
+
+    <br>
+
+
+    <h1>회원 정보</h1>
+        <table border= "1" width = "300" height ="300"> 
+            <!-- table 위나 아래에 다는  -->
+            <caption>&lt; 21년 회원 정보 &gt;</caption>  <!-- lt, gt는 <> : 그냥 쓰면 태그로 인식해서 이렇게 해야함 -->
+            <tr><!-- table header로 중앙정렬/ bold -->
+                
+                <!-- <td>이름</td>
+                    <td>나이</td>
+                    <td>성별</td>   -->
+                    <th>이름</th>
+                    <th>나이</th>
+                    <th>성별</th> 
+            </tr>
+
+            <tr>
+                <td align = "center">김예진</td>
+                <td align = "center">26</td>
+                <td align = "center">여</td>
+            </tr>
+            <tr>  <!-- tr은 그냥 row를 생성해주는 td/th만 값을 넣는다.  -->
+                <td valign = "bottom" align = "right">김태희</td> 
+                <td align = "center">26</td>
+                <td valign = "top" align = "left">남</td>
+            </tr>
+            <tr> 
+                <td align = "center">장혜린</td>
+                <td align = "center">26</td>
+                <td align = "center">여</td>
+            </tr>
+            <!-- <caption> 끝 </caption>  기본적으로 캡션은 위에 있다. 아래로 내리려면 CSS 정보를 출력하기 위한 틀만 잡아 놓은 것이 html-->
+        </table>
+
+        <!-- align을 테이블에서 주로 사용 -->
+
+        
+
+
+        <h3> cation태그를 이용하지 않고 설명 추가하기</h3>
+        <p>figure태그 이용하기</p>
+        
+        <figure>
+            <!-- <figcaption>&lt;21년 회원 정보&gt;</figcaption> -->
+                <table border= "1" width = "300" height ="300"> 
+                    
+                    <tr>
+                        
+                        
+                            <th>이름</th>
+                            <th>나이</th>
+                            <th>성별</th> 
+                    </tr>
+
+                    <tr>
+                        <td align = "center">김예진</td>
+                        <td align = "center">26</td>
+                        <td align = "center">여</td>
+                    </tr>
+                    <tr>  <!-- tr은 그냥 row를 생성해주는 td/th만 값을 넣는다.  -->
+                        <td valign = "bottom" align = "right">김태희</td> 
+                        <td align = "center">26</td>
+                        <td valign = "top" align = "left">남</td>
+                    </tr>
+                    <tr> 
+                        <td align = "center">장혜린</td>
+                        <td align = "center">26</td>
+                        <td align = "center">여</td>
+                    </tr>
+                </table>
+                <figcaption>&lt;21년 회원 정보&gt;</figcaption> <!-- 얘는 밑에도 가능 -->
+        </figure>
+
+            <!-- 태이블 병합 > rowspan : 행을 병합,  colspan : 열을 병합  : td에 옵션 준다고 생각하면 됨  -->
+        <h1>테이블 병합하기 </h1>
+            <p1> rowspan / colspan 사용하기 </p1>
+
+                <!-- table>(tr>td*3)*3 emmet abbriviation -->
+                <table border=" 1" width = "300" height = "300">
+                    <tr>
+                        <td rowspan="3">1열1행</td> <!-- rowspan은 시작하는 td에서 사용 -->
+                        <td>2열2행</td>
+                        <td>3열1행</td>
+                    </tr>
+
+                    <tr>
+                        <!-- <td>1열2행</td> -->
+                        <td>2열2행</td>
+                        <td rowspan = "2" valign = "center" align="right">3열2행</td>
+                    </tr>
+
+                    <tr>
+                        <!-- <td>1열3행</td> -->
+                        <td valign = "bottom" align ="right">2열3행</td>
+                        <!-- <td>3열3행</td> -->
+                    </tr>
+
+                </table>
+
+
+        <br><br>
+            <table border="1" width = "200"; height = "200"; align = "center">
+                <tr >
+                    <td>1</td>
+                    <td colspan="2">2</td>
+                    <!-- <td>3</td> -->
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td colspan="3" align = "center">7</td>
+                    <!-- <td>8</td>
+                        <td>9</td> -->
+                </tr>
+            </table>
+
+        <!-- global로 중앙정렬 안되니까... -->
+        <h2>colspan/ rowspan 동시 적용</h2>
+            <table border="1" width = "300" height = "300">
+                <tr>
+                    <td colspan="2" rowspan ="2'">1</td>
+                    <!-- <td>2</td> -->
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <!-- <td>5</td> -->
+                    <!-- <td>6</td> -->
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+            </table>
+
+        <br><br>
+
+            <table border = "1" width ="200" height= "200"> 
+                <tr>
+                    <td rowspan="2" colspan="4">사진</td>
+                
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="5">11</td>
+                </tr>
+                <tr>
+                    <td colspan="5">16</td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="5">21</td>
+                
+                </tr>
+            </table>
+
+        <h2> 테이블 영역 설정하기</h2>
+        <p> 테이블을 row를 기준으로 영역을 설정한다.</p>
+            <table border="1" height = "200" width = "200">
+              <thead>
+                    <tr>
+                        <th>이름</th>
+                        <th>나이</th>
+                        <th>성적</th>
+                        <th>성별</th>
+                    </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>유병승</td>
+                        <td>19</td>
+                        <td>40</td>
+                        <td>남</td>
+                    </tr>
+                    <tr>
+                        <td>김상현</td>
+                        <td>29</td>
+                        <td>90</td>
+                        <td>남</td>
+                    </tr>
+            </tbody>
+            <tfoot>
+                    <tr>
+                        <td > 총계</td>
+                        <td colspan="3" align = "center"> 130</td>
+
+                    </tr>
+            </tfoot>
+            </table>
+
+            <style>
+
+                thead{
+                    background-color:gray;
+
+                }
+
+                thead+tbody{
+                    background-color: springgreen;
+                }
+
+                tfoot{
+                    background-color:aqua;
+                }
+
+            </style>
+
+
+
+
+        <h2> 컬럼을 기준으로 영역을 설정하기 </h2>
+            <!-- table[border="1" width ="300" height = "300"]>(tr>td*3)*3 -->
+            <!-- table[border = "1" width = "300" height = "300"] >(tr>td*3)*3 -->
+            table[border = "1" width = "300" height = "300"] >(tr>td*3)*3
+        <table border="1" width ="300" height = "300" >
+            <colgroup>
+                <col style = "background-color : magenta">
+                <col style = "background-color : lime">
+                <col style= " background-color:  brown ;">
+            </colgroup>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+    </body> 
+</html>

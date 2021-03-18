@@ -1,0 +1,499 @@
+<!-- 폼 관련 태그 
+    형식 관련 태그 
+    web 구조 : 결국 html문서를 주고 받는 것
+
+                   < respond resquest
+    client ======================= server
+        request service >
+
+        이 구조는 무조건임... 요청을 하면 무조건 응답하게 되어있음...
+        서버도 공부를 해야하나 싶은데...
+
+    폼 태그 >> 입력값을 서버로 보내주는 역할을 하는 태그
+    
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form tag</title>
+</head>
+<body>
+    <!-- 사용자가 입력한 data를 보내는 방식과 처리할 프로그램을 정하는 태그 -->
+    <!-- 프로토콜 > 통신 규약 > http(hyper text transfer protocol) -->
+    <!-- 속성으로 처리 /// method/ action(반드시 default가 없음)/ target -->
+
+    <!-- 
+        method : 데이터를 어떻게 보낼것인가 1. get / 2.post
+            1. get : url주소에 데이터를 넣어서 보냄 _ url에 데이터를 넣어서 보내서 보안 취약
+            2. post : 데이터를 보낼 때 감춰서 보냄 (http header에 넣어서 보냄) ** 면접 질의 질문 중... 하나
+
+        name : form의 구분자로 사용(JS나 jquery를 쓸 때 )
+
+        action : 
+
+
+
+
+
+     -->
+
+
+     <!-- 
+         입력 받는 태그 input (form 안에 들어가서 많이들 구현하지)
+         속성으로 모든 것을 설정  
+         기본적인 타입들을 숙지할 필요가 있음
+
+
+      -->
+
+      <h1> 폼 태그 기본 </h1>
+      <pre> 
+          <hr>
+          form태그는 서버에 데이터를 전송해주는 기능을 하는 태그이다. <br>
+          주요 속성 : method/ action <br>
+                    method : get방식과 post방식이 있다. (data를 전송할 방식에 대해서 결정한다.)<br>
+                    action : 요청할 주소 작성
+
+      </pre>
+
+        <h2> post / get 방식으로 데이터 전송하기</h2>
+        <h3>get방식</h3>
+        <form method = "get" action  = "../16.03.21/16.03.21_07_multimediaTag(music,video).html">
+
+            <input type = "text" name ="id"/>
+            <input type = "password" name ="pw"/>
+            <input type = "submit" value ="로그인"/>
+
+            <!-- file:///Users/sanghyeonkim/Downloads/HTML/lecture/16.03.21/16.03.21_07_multimediaTag(music,video).html
+                ?id=1&pw=1 
+            ?를 기준으로 데이터가 드러남
+            &로 연결되어 넘어감 
+            간단하게 게시물에서 검색하거나 할 때  
+        
+            https://search.naver.com/search.naver
+            테이터 >  ?where=nexearch&sm=top_hty&fbm=1&ie=utf8 >> hidden
+            &query=유병승 우리가 던진 쿼리-->
+            
+        </form>
+        <h3>  post 방식  </h3>
+
+        <form method  = "post" action="../16.03.21/16.03.21_08_hyperlinkTag.html ">
+
+         아이디&nbsp;&nbsp;&nbsp;  <input type = "text" name ="id"/> <br>
+         패스워드   <input type = "password" name ="pw"/> <br>
+                 <input type = "submit" value ="로그인"/>
+
+        <!-- file:///Users/sanghyeonkim/Downloads/HTML/lecture/16.03.21/16.03.21_08_hyperlinkTag.html 아무 것도 안나왔네-->
+        
+        </form>
+        <p> form 태그의 method 속성은 반드시 필요한 속성으로 default값을 가지고 있다. <br>
+            default는 get이다.
+        </p>
+
+
+        <form action="../16.03.21/16.03.21_04_tableTag.html">
+            <input type = "text" name = "test">
+            <input type="submit" value="전송">
+
+            <!-- file:///Users/sanghyeonkim/Downloads/HTML/lecture/16.03.21/16.03.21_04_tableTag.html?test=2
+            기본이 get방식 -->
+
+        </form>
+
+
+
+        <h1>legend / fieldset</h1>
+        <fieldset>
+            <legend>검색창</legend>
+            
+            <form action="">
+                <input type="text" name = "test">
+                <input type="submit" value = "전송">
+                <p>검색어를 입력하세요 www</p>
+            </form>
+
+        </fieldset>
+
+
+
+        <h1>input태그에 대해서 알아보자</h1>
+        <p>
+            input태그는 사용자가 입력할 수 있는 화면을 출력하는 태그 <br>
+            입력화면은 type속성에 따라 결정됨 <br>
+            input 태그는 반드시 form태그 안에 있어야하는 것은 아니다.( 독립적으로 쓸 수도 있다. )
+
+
+        </p>
+
+
+        <h3>text, password 타입</h3>
+        <p>text와 password 타입은 한 줄 문자를 입력 받는 화면입니다.(컴포넌트) </p>
+        <p>기본</p>
+        <input type="text" id = "str" name="str "> <!-- 통상 id/class/ name등을 많이 선언함 --> <br>
+        <p>placeholder</p>
+        <input type="text" name="str" placeholder="검색어를 입력하세요"><br>
+        <p>value</p>
+        <input type="text" name="str" value = "오늘 아침 추워요"><br>
+        <!-- 여기서 기본 값을 지워주고 다른 값을 쓰면 value가 바뀐다. readonly등과 함께 쓰인다(이미 입력된 아이디를 보여주는) -->
+        <p>value & readonly</p>
+        <input type="text" name="str" value = "readonly 속성 사용" readonly><br>
+        <p>size</p>
+        <input type="text" name = "str" size="40"><br>
+        <p>size&maxLength</p>
+        <input type="text" name = "str" size="3" maxlength="2" ><br>
+
+
+        <p>minLength & required</p>
+        <form action="../15.03.21/15.03.21_03_List.html">
+            <input type="text" name = "str" size ="8" minlength="3">
+            <input type="text" name = "keyword" required>
+            <input type="submit" value="제출">
+            <!-- minlength는 제출 했을 때 작용함 / required도 제출 때 작동-->
+        </form> <br>
+        
+
+        <p>password</p>
+        passwordtype <input type="password" name = "pw" >
+
+        <h3>hidden type</h3>
+        <pre>
+            서비스를 실행할 때 반드시 보내야하지만<br>
+            사용자에게 굳이 보여줄 필요가 없는 데이터를 설정할 때 사용
+            사용자가 입력할 수 없기 때문에 value속성을 반드시 입력한다.(입력하지 않으면 그냥 필요 없는 값)
+        </pre>
+        <form action="">
+            제목 <input type="text" name = "title" value = "ㅋㅋㅋㅋ">
+            내용 <input type="text" name = "content" >
+            <input type="hidden" name="boardNo" value="1">
+            <input type="submit" value="수정">
+
+        </form>
+
+        <h2>type : button</h2>
+        <pre>
+            
+            버튼이야 그냥 ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ
+            반드시 기능을 추가해야한다. (이벤트 처리 > js와 연결해서 사용한다.)
+
+        </pre>
+
+         id <input type="text" name = "id">
+            <input type="button" value="중복확인" onclick="test();"> <!-- "이벤트 핸들러를 입력했다"고 한다... -->
+
+            <script>
+                function test(){
+                    // alert("왜 눌러");
+                    open("","_blank", "width=300, height = 300");
+                }
+            </script>
+
+        <h2>check box, radio type</h2>
+        <pre>
+            일정한 예제를 주고
+            체크/선택하도록 유도하는 기능(화면출력)
+            name과 value값을 반드시 지정해줘야한다. 
+
+            동일한 선택 조건에 있는 것은 name을 동일하게 해준다.(hobby1, hobby2 이렇게가 아니라 )
+            >> 이 녀석은 참고로 데이터가 넘어가면 배열로 서버에서 받을 수 있다. 
+
+            check박스는 다중 선택 //  radio는 다자택일
+        </pre>
+
+        <fieldset>
+            <legend>취미</legend>
+                <form action="">
+                    <input type="checkbox" name="hobby" value="운동"> 운동 <br>
+                    <input type="checkbox" name="hobby" value="코딩"> 코딩 <br>
+                    <!-- file:///Users/sanghyeonkim/Downloads/HTML/lecture/17.03.21/17.03.21_09_formTag.html
+                        ?hobby2=%EC%BD%94%EB%94%A9(코딩) >> key value형식-->
+                    <input type="checkbox" name="hobby" value="독서"> 독서 <br>
+                    <input type="checkbox" name="hobby" value="여행"> 여행 <br>
+                    <input type="submit" values = "제출">
+
+                </form>
+        </fieldset>
+        <br>
+        <h3>체크 박스 범위???를 묶어주는 것  == label이라는 테두리 // label for // checked // disalbed</h3>
+        <fieldset>
+            <legend>취미</legend>
+                <form action="">
+                        <label><input type="checkbox" name="hobby" value="health"> 운동 <br></label>
+                        
+                            <input type="checkbox" id = "code"name="hobby" value="code"> <label for = "code">코딩</label> <br>
+                    <!-- file:///Users/sanghyeonkim/Downloads/HTML/lecture/17.03.21/17.03.21_09_formTag.html
+                        ?hobby2=%EC%BD%94%EB%94%A9(코딩) >> key value형식-->
+                        <label><input type="checkbox" name="hobby" value="book" checked > 독서 <br></label>
+                        <label><input type="checkbox" name="hobby" value="travel" disabled> 여행 <br></label>
+                        <label><input type="submit" values = "제출">
+
+                            <!-- disabled가 되면 아예 쓰지를 않음 checked가 돼있는 상태라도 -->
+
+                </form>
+        </fieldset>
+
+        <br>
+        <h3>
+            성별이라는 것으로 radio 버튼 만들기
+        </h3>
+
+        <fieldset>
+            <legend>성별</legend>
+                <input type="radio" id = "male" name = "gender" value="male"> <label for = "male">남자</label>
+                <input type="radio" id = "female" name = "gender" value="female" checked> <label for = "female">여자</label>
+<!-- 이름이 같으면 하나의 그룹으로 봐서 하나만 체크할 수 있음 -->
+                <input type="radio" id = "male" name = "gender2" value="male"> <label for = "male">test2</label>
+        </fieldset>
+
+
+        <h2>type file</h2>
+            <pre>
+                파일을 서버에 업로드 할 때 
+                > 로컬에 있는 파일을 가져올 때(바이너리 데이터를 가져올 때)
+                > 바이너리 파일이 전송되기 때문에 form으로 전송할 때는 
+                encording값을 변경해줘야함. > ENCTYPE속성을 이용
+                > method는 반드시 post로 전송해야함 (url에 바이너리 쓸 수 없으니까)  
+            </pre>
+                <form action="" method = "post" enctype="multipart/form-data"> <!-- 반드시 설정해줘야 method는 반드시 post로 -->
+                    <input type="file" name="upload" accept="audio/*" required>
+                    <input type="file" name="upload" accept="video/*" required>
+
+                    <h3>multiple 옵션</h3>
+                    <input type="file" name="upload" accept="video/*" required multiple>
+                    <!-- 
+                        form안에 단 하나라도 있으면 multipart/form-data로
+                        기본은 application/x-www~ 인데 이러면 바이너리로 넘어가니까
+                        무조건 
+                    -->
+                </form>
+
+        <h2>type image</h2>
+            <pre>
+               사진을 submit으로 이용하는 타입
+                사진을 출력을 하는데 submit 기능이 있다는 소리
+            </pre>
+
+            <form action="">
+                <input type="text" name="title" value="title2">
+                <input type="image" src = "../16.03.21/test.jpg" name = "test" value="test" width="100" height="100">
+            </form>
+
+            <!--
+                 file:///Users/sanghyeonkim/Downloads/HTML/lecture/17.03.21/17.03.21_09_formTag.html
+                ?test.x=61&test.y=47
+            이 좌표는 내가 클릭하는 곳 value가 바뀌네..?-->
+        <h2> type submit, reset</h2>
+        <pre>
+            form태그의 자식인 input태그 값을 전송하는 태그이다.(submit)
+            fomr태그의 자식인 input태그 값을 초기화하는 태그이다. (reset)
+
+            submit / reset은 버튼으로 출력이 되고 버튼의 값은 value속성으로 설정(버튼의 명칭을)
+        </pre>
+
+        <form action="">
+            <fieldset>
+                <legend>회원가입</legend>
+                    user id : <input type="text" name="id" placeholder="id" >
+                    password: <input type="password" name="Password" placeholder="pw">
+                    취미<br>
+                    <input type="checkbox" name="hobby" value = "health"> 운동
+                    <input type="checkbox" name="hobby" value = "sing"> 노래
+                    <input type="checkbox" name="hobby" value = "sleep"> 잠
+
+                    <!-- <input type="submit" value="회원가입"> -->
+                    <button type="button" onclick="test();">회원가입</button>
+                    <!-- button을 만들면 기본 submit/ 근데 type에 button을 주면 submit기능이 사라짐 -->
+                    <input type="reset" value="취소">
+            <!-- submit이랑 같은 form으로 묶여 있는 애들만 보내고 취소한다. -->
+            </fieldset> 
+        </form>
+
+        <h2>html5에서 지원하는 type</h2>
+        <pre>
+            <h3>1. type : Color</h3>
+                    색상 선택하는 type
+            <h3>2. type : date, datetime, datetimeLocal, month, week, time</h3>
+                    날짜를 입력받는 type
+            <h3>3. type : number</h3>        
+                    숫자 입력 전용
+            <h3>4. 기타 등등 타입 (search/range/url/email</h3>
+                    -1. search : 검색 (검색어/ 텍스트 타입이랑 비슷한데 한 번에 지우는 버튼이 있음)
+                    -2. range  : 범위 (일정 범위에 있는 값을 표시 max/min/step을 설정해줘야 한다.)
+                    -3. url    : 사이트의 주소받는 입력창으로 (텍스트랑 비슷한데 http://문구가 있는지 체크해줌)
+                    -4. email  : 이메일을 입력 받는 창(텍스트랑 비슷한데 뒤에 @가 있는지 파악)
+
+                    .. 텍스트랑 유사한데 기능이 조금씩 주가됨
+            <h3>5. 기타 입력 창 태그</h3>
+                    1. select   : combo box 형식으로 선택하는 것 (검색할 때 카테고리)
+                                > 단독으로는 안쓰이고 자식태그로 옵션 태그를 가지고 있다. >옵션태크의 value값을 밑으로..( list )
+                    2. datalist : input태그 text타입의 자동완성기능을 할 수 있게 하는 태그는
+                                > 자식태그로 옵션 태그를 가지고 있다.
+                    3. textarea : 여러 문장을 입력받게 하는 태그
+                                > 긴 글을 쓰거나 게시판의 내용/ 소개글을 쓸 수 있도록
+                                > 특정 크기를 속성으로 정해줘야함 (cols/ rows로)
+                    
+
+        </pre>
+        <br>
+        <h3>color</h3>
+        <form action="">
+                <input type="color" name="background" value="#ffffff"><!-- 초기값도 바꿀 수 있다. --> 
+                <!-- #ff 00 00 R/G/B -->
+                <input type="submit" value="전송">
+                <!-- rgb 0~255/0~255/0~255 
+                ?background=%23ea9606
+            16진수 #으로하는데 %로 인코딩한거임-->
+        </form> 
+
+        <br>
+        <h3>calendar</h3>
+        <form action="">
+            <input type="date" name="birthday" min="2021-01-01" max="2021-12-31">
+            <input type="datetime">
+            <input type="datetime-local" name="time">
+            <!-- time=2021-03-17T18%3A25 -->
+            <input type="month">
+            <input type="week">
+            <input type="time">
+
+            <!-- 적도록 만든 -->
+            <input type="submit" value="전송">
+            <!-- ?birthday=2021-03-17 이렇게... 근데 서버로 넘어가면 String이 되니까 parsing해 줘야한다. -->
+            <!-- 날짜에 기간을 둘 수 있잖아요!? min/max로 할 수 있다. -->
+        </form>
+        <h3>number</h3>
+        <form action="">
+            <h5>max/ min</h5>
+            <input type="number" max="255" min="-255"  >
+            <br>
+            <h5>step</h5>
+            <input type="number" max="255" min="-255" step="20" name="count">
+            <!-- 얘도 서버로 넘어올 때는 String -->
+            <br>
+            <h5></h5>
+            <input type="submit">
+            <!-- 제출이 안 됨 -->
+
+        </form>
+
+        <h3>기타 타입</h3>
+         <form action="">
+             <h5>search</h5>
+             <input type="search" name="keyword" placeholder="검색어"> <br>
+             <h5>range</h5>
+             <input type="range" max="10" min="0" step="2" value="0"> <br>
+             <h5>url</h5>
+             <input type="url"> <br>
+             <!-- http:가 들어있는지 검사 -->
+             <h5>email</h5>
+             <input type="email"> <br>
+             <!-- @가 있는지 검사 -->
+             <input type="submit" value="전송"> <br>
+         </form>
+
+
+         <h3>기타 입력 창</h3>
+         <form action="">
+             <h5>select</h5>
+             <select name="category">
+                <option value = "seoul">서울</option>
+                <option value = "daejeon">대전</option>
+                <option value = "busan">부산</option>
+                <option value = "gyeongi">경기도</option>
+                <option value = "ganwon">강원도</option>
+                <option value = "jeonla">전라도</option>
+             </select>
+
+             <input type="submit" value="제출">
+             <!-- file:///Users/sanghyeonkim/Downloads/HTML/lecture/17.03.21/17.03.21_09_formTag.html
+                ?category=daejeon 
+            value의 값이 넘어감  post방식으로하면 한글이 주소에서 깨진다.-->
+         </form>
+
+
+         <h3>기타 입력 창_multiple 옵션</h3>
+         <form action="">
+             <h5>select</h5>
+             <select name="category" multiple> <!-- 얘도 배열로 받을 수 있다. -->
+                <option value = "seoul">서울</option>
+                <option value = "daejeon">대전</option>
+                <option value = "busan">부산</option>
+                <option value = "gyeongi">경기도</option>
+                <option value = "ganwon">강원도</option>
+                <option value = "jeonla">전라도</option>
+             </select>
+
+             <input type="submit" value="제출">
+             <!-- file:///Users/sanghyeonkim/Downloads/HTML/lecture/17.03.21/17.03.21_09_formTag.html
+                ?category=daejeon 
+            value의 값이 넘어감  post방식으로하면 한글이 주소에서 깨진다.-->
+         </form>
+
+
+
+
+         <h5>option grouping</h5>
+         <form action="">
+             <h5>select</h5>
+             <select name="category">
+                 <optgroup label="특별시/광역시">
+
+                    <option value = "seoul">서울</option>
+                    <option value = "daejeon">대전</option>
+                    <option value = "busan">부산</option>
+                </optgroup>   
+
+                <optgroup label="시/도">
+
+                    <option value = "gyeongi">경기도</option>
+                    <option value = "ganwon">강원도</option>
+                    <option value = "jeonla">전라도</option>
+                </optgroup>
+             </select>
+
+             <input type="submit" value="제출">
+             <!-- file:///Users/sanghyeonkim/Downloads/HTML/lecture/17.03.21/17.03.21_09_formTag.html
+                ?category=daejeon 
+            value의 값이 넘어감  post방식으로하면 한글이 주소에서 깨진다.-->
+         </form>
+            <br>
+        <h3>datalist</h3>
+        <form action="">
+            <input type="text" name="sample" id="sample" list="data">
+                <datalist id="data">
+                    <option value="유병승">유병승</option>
+                    <option value="김상현">김상현</option>
+                    <option value="제인혁">제인혁</option>
+                    <option value="김예진">김예진</option>
+                    <option value="김지한">김지한</option>
+                </datalist>
+            <input type="submit" value="제출">
+        </form>
+            <br>
+        
+            <h3>textarea</h3>
+                <form action="">
+                    <!-- cols = 30칸 rows = 5줄 -->
+                    <textarea name="info" cols="30" rows="5" style="resize: none;"></textarea> <!-- 그냥 >< 사이에 들어가면 다 문자로 잡으니까 띄우지 마세요 단도 내리지 말고 -->
+                    <input type="submit" value="제출">   
+                </form>
+
+
+
+
+
+
+
+                <!-- 재미삼아 ㅋㅋ progressBar-->
+                <progress id="p" value="0" max="100"></progress>
+                <script>
+                    setInterval(()=>{
+                        let pro = document.getElementById("p");
+                        pro.value+=(Number)(Math.random()*20)
+                    },500);
+                </script>
+</body> 
+</html>

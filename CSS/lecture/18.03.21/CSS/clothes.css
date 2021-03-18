@@ -1,0 +1,7 @@
+p{
+    font-size: 20px;
+    color: white;
+    background-color: aqua;
+
+}
+/* 주로 공통적인 부분에 대해서 css파일로 뺴낸다. */

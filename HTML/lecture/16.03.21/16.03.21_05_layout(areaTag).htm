@@ -1,0 +1,94 @@
+<!-- 영역설정 태그
+
+div :  line을 나눈다.
+span : line에서 일부만 
+이 녀석들의 자식으로 구성되는 
+css랑 같이 움직인다. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>영역을 분할하는 태그</title>
+        
+        <style>
+
+            div{
+                width:500px;
+                height:500px;
+                border:1px red solid;
+                
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+        <h1>수직으로 영역을 분할하는 div태그 </h1>
+        <p>
+            div는 페이지의 한 라인 전체를 차지하는 태그
+            별도의 설정이 없으면 그 라인에 다른 태그가 오지 못함
+            block속성의 태그임
+
+            특징 : 크기/넓이/높이를 설정할 수 있다.
+        </p>
+    
+    <div id = "logo">div</div> <!-- 단을 아예 내려버리는데???> block속성을 가지고 한 개의 라인을 다 차지한다. -->
+    
+    <div id = "info">
+            <h1>이 사이트는 html을 공부하기 위한 사이트임</h1>
+            <p> 기초적인 태그에 대해서 알아보는 사이트입니다.</p>
+            <ul>
+                <li> 문자태그</li>
+                <li> 목록태그</li>
+                <li> 태이블태그</li>
+            </ul>
+    </div>
+
+    <h2> 라인에서 일 부분의 영역을 지정하는 태그 eg)특정 글씨/ 문구</h2>
+    <p>
+        span태그를 이용 > 라인 안에서 일부만 적용
+        특징 : 라인에 속해 있기 떄문에 높이와 너비를 마음대로 수정할 수 없다.(라인에 종속)
+
+    </p>
+    <div id = "container">
+        <h1>이제 곧 <span class = "target">점심 시간</span>이네요 ㅎㅎ</h1>
+
+    </div>
+    <style>
+        span{
+            width : 500px;
+            height : 500px;
+            border : 1px blue solid;
+
+        }
+        .target{
+            color :red;
+            font-size: 50px;
+
+        }
+    </style>
+
+
+        <h1>iframe태그 </h1>
+        <p> 
+            외/내부의 다른 html파일(페이지 )를 불러와 출력하는 태그
+            scr속성은 내부파일, 외부는 링크로 가능
+        </p>
+
+        <iframe width = 400; height = 400; src = "16.03.21_02_tableTag.html"></iframe>
+        <iframe width = 600; height = 600; src = "http://www.iei.or.kr"></iframe>
+        <br>
+        <!-- <iframe width = 600; height = 600; src = "https://www.google.com"></iframe> -->
+
+        <iframe width = 1920; height = 1024; src = "https://www.youtube.com/embed/QZbcN7iVxLg"></iframe>
+
+        
+
+    </body>
+
+</html>
+
