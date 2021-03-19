@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문단 스타일</title>
+</head>
+<body>
+        <h2>문단정렬하기</h2>
+        <pre>
+
+            text-align : left||right||center||justify (양쪽)
+
+        </pre>
+            <h4>normal</h4>
+        <div class="container">
+        당신은 날 설레게 만들어
+        조용한 내 마음 자꾸만 춤추게 해
+        얼마나 얼마나 날 떨리게 하는지
+        당신이 이 밤을 항상 잠 못 들게 해
+        매일 같은 밤 너를 생각하면서
+        유치한 노랠 들으며 심장이 춤을 추면서
+        오오 난 너를 기다리면서
+    
+        </div>
+
+        <br>
+
+        <h4>left</h4>
+        <div class="container left">
+        유치한 노랠 부르며 심장이 춤을 추면서 워
+        나를 떨리게 하나요 그대
+        왜 나를 설레게 하나요 자꾸만
+        오늘도 잠 못 이루는 이 밤 아름다운 그대
+        나를 아프게 하나요 웃는 그대
+        왜 자꾸 설레게 하나요 하염없이
+        오늘 밤 잠이 오질 않네요 보고 싶은 그대여
+       
+            </div>
+            <br>
+        <h4>right</h4>    
+         <div class="container right">
+       
+        왜 자꾸 설레게 하나요 하염없이
+        오늘 밤 잠이 오질 않네요
+        보고 싶은 그대여
+        매일 밤 너를 생각하면서
+        유치한 노랠 들으며 심장이 춤을 추면서
+        워오 난 너를 기다리면서
+        유치한 노랠 부르며 심장이 춤을 추면서 워
+        나를 떨리게 하나요 그대
+        왜 나를 설레게 하나요 자꾸만
+        오늘도 잠 못 이루는 이 밤 아름다운 그대여
+        나를 아프게 하나요 웃는 그대
+        왜 자꾸 설레게 하나요 하염없이
+        오늘 밤 잠이 오질 않네요 보고 싶은 그대여
+            </div>
+            <br>
+            <h4>center</h4>
+            <div class="container center">
+       
+        왜 자꾸 설레게 하나요 하염없이
+        오늘 밤 잠이 오질 않네요
+        보고 싶은 그대여
+        매일 밤 너를 생각하면서
+        유치한 노랠 들으며 심장이 춤을 추면서
+        워오 난 너를 기다리면서
+        유치한 노랠 부르며 심장이 춤을 추면서 워
+        나를 떨리게 하나요 그대
+        왜 나를 설레게 하나요 자꾸만
+        오늘도 잠 못 이루는 이 밤 아름다운 그대여
+        나를 아프게 하나요 웃는 그대
+        왜 자꾸 설레게 하나요 하염없이
+        오늘 밤 잠이 오질 않네요 보고 싶은 그대여
+            </div>
+            <br>
+            <h4>justify</h4>
+        <div class="container justify">
+            
+            왜 나를 설레게 하나요 자꾸만
+            오늘도 잠 못 이루는 이 밤 아름다운 그대여
+            나를 아프게 하나요 웃는 그대
+            왜 자꾸 설레게 하나요 하염없이
+            오늘 밤 잠이 오질 않네요 보고 싶은 그대여
+                </div>
+
+
+    <hr>
+        <h3>text-indent</h3>
+        <pre>
+            들여쓰기!
+        </pre>
+        <div class="container indent">
+        
+            왜 나를 설레게 하나요 자꾸만
+            오늘도 잠 못 이루는 이 밤 아름다운 그대여
+            나를 아프게 하나요 웃는 그대
+            왜 자꾸 설레게 하나요 하염없이
+            오늘 밤 잠이 오질 않네요 보고 싶은 그대여
+                </div>
+    <hr>    
+        <h3>line-height</h3>
+        <div class="container lheight">
+        
+            왜 나를 설레게 하나요 자꾸만
+            오늘도 잠 못 이루는 이 밤 아름다운 그대여
+            나를 아프게 하나요 웃는 그대
+            왜 자꾸 설레게 하나요 하염없이
+            오늘 밤 잠이 오질 않네요 보고 싶은 그대여
+                </div>
+                <!-- 위 아래로 line height를 주는데.. 다른 태그와의 간격도 띄어준다. margin을 했는데 이상하면 line-height로 잡기도 한다.  -->
+        <p class="lheight">이건p태그</p>
+        <p class="lheight">이건p태그</p>
+        <p>이건p태그</p>
+        <p>이건p태그</p>
+    <hr>
+        <h3>text-overflow</h3>
+        <pre>
+            내가 선택한(지정한) 영역에서 택스트가 벗어났을 때의 설정
+            ellipsis : 말 줄임
+            clip : 잘라냄
+
+        </pre>
+
+        <div class="cont clip nowrap">
+            왜 나를 설레게 하나요 자꾸만  오늘도 잠 못 이루는 이 밤 아름다운 그대여
+            
+                </div>
+                <br><br><br><br>
+        <div class="cont ellip nowrap">
+            왜 나를 설레게 하나요 자꾸만  오늘도 잠 못 이루는 이 밤 아름다운 그대여
+            
+                </div>
+
+
+    <style>
+        .nowrap{
+            white-space: nowrap;
+        }
+        
+        .cont{
+            width: 100px;
+            height: 100px;
+            border: 1px black solid;
+        }
+        .clip{
+            overflow: hidden;
+            text-overflow: clip;
+        }
+        .ellip{
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .lheight{
+            line-height: 50px;
+        }
+        .indent{
+            text-indent: 32px;
+        }
+        .left{
+            text-align: left;
+        }
+        .right{
+            text-align: right;
+        }
+        .center{
+            text-align: center;
+        }
+        .justi{
+            text-align: justify;
+        }
+        .container{
+
+            width : 300px;
+            height: 180px;
+            border: 1px skyblue solid;
+
+        }
+    </style>
+    
+</body>
+</html>

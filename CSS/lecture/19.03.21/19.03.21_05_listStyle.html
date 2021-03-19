@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listStyle</title>
+</head>
+<body>
+    <h2>listStyle</h2>
+        <h3>목록 스타일 적용하기</h3>
+        <pre>
+            
+            list-style-type : 앞의 숫자, 도형을 수정할 수 있는 속성
+            ul : disc, circle, square, none;
+            ol : decimal, decimal-lead-zero, lower-roman/upper-roman, lower-alpha/upper-alpha
+
+        </pre>
+        <h4>ul_disc</h4>
+        <ul class="ulstyle1_disc">
+            <li>html</li>
+            <li>css</li>
+            <li>javaScript</li>
+            <li>jquery</li>
+        </ul>
+        <h4>ul_circle</h4>
+        <ul class="ulstyle2_circle">
+            <li>html</li>
+            <li>css</li>
+            <li>javaScript</li>
+            <li>jquery</li>
+        </ul>
+        <h4>ul_square</h4>
+        <ul class="ulstyle3_square">
+            <li>html</li>
+            <li>css</li>
+            <li>javaScript</li>
+            <li>jquery</li>
+        </ul>
+        <h4>ul_none</h4>
+        <ul class="ulstyle4_none">
+            <li>html</li>
+            <li>css</li>
+            <li>javaScript</li>
+            <li>jquery</li>
+        </ul>
+        <br><br>
+        <h4>ol_dec_lead_zero</h4>
+        <ol class="ol_dec_zero">
+            <li>html</li>
+            <li>css</li>
+            <li>js</li>
+            <li>jquery</li>
+        </ol>
+    <hr>
+        <h3>목록에 이미지 넣기</h3>
+        <pre>
+            list-style-image : url(이미지 주소)
+            이미지의 크기가 적당해야 한다. (한 30px X 30px);
+        </pre>
+        <ol class="ol_image">
+            <li>미키 마우스</li>
+            <li>미니 마우스</li>
+            <li>구피</li>
+            <li>데이지</li>
+            <li>도널드덕</li>
+            <li>푸</li>
+            <li>티거</li>
+        </ol>
+    
+
+
+
+     <style>
+         .ol_image{
+
+             list-style-image: url(../CSS/50Med3oI_400x400.jpg);
+             font-size: 28px;
+             list-style-position: inside;
+             /* outside가 기본값임 */
+         }
+         .ol_dec_zero{
+             list-style-type: decimal-leading-zero;
+         }
+
+         .ulstyle4_none{
+             list-style-type: none;
+         }
+          .ulstyle3_square{
+             list-style-type: square;
+         }
+         .ulstyle2_circle{
+             list-style-type: circle;
+         }
+         .ulstyle1_disc{
+             list-style-type: disc
+         }
+     </style>
+</body>
+</html>
