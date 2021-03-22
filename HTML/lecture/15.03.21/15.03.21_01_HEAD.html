@@ -14,22 +14,35 @@
                 <!-- 메타 테그 : 속성명과 속성 내용을 답고 있다. -->
 
                 <!-- http-equiv 는 메타 요소에 정의된 명령을 먼저 실행 후 페이지를 로드
-                    content-type mime설정 > 윈도우에서 보면 확장자 같은... 뭘로 만들었는지
-                    X-ua-compatiable : 반응형 때문에 나온 녀석 : 환경에서 어떤 버젼에 맞춰서 해석해라 이런식으로
-                    refresh : 리로드하는 것  자동으로 페이지 이동 eg) 5분 후에 자동으로 이동합니다.
-                    content -script -type javascript 등등 스크립트 설정 잡아주는 : 요즘은 자동으로 잡아줌 -->
+                    content-type 설정 > 윈도우에서 보면 확장자 같은... 뭘로 만들었는지
+                        X-ua-compatiable : 반응형 때문에 나온 녀석 : 환경에서 어떤 버젼에 맞춰서 해석해라 이런식으로
+                        refresh : 리로드하는 것  자동으로 페이지 이동 eg) 5분 후에 자동으로 이동합니다.
+                        content -script -type javascript 등등 스크립트 설정 잡아주는 : 요즘은 자동으로 잡아줌 -->
 
                 <!-- http-equiv와 같은 의미인데 
                     얘는 진짜 정보임... 그냥 이름이 뭐고 누가 만들었고, 이 페이지가 뭘 표시하냐
                     robot은 크롤러가 어디까지 할 수 있냐 -->
 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html> -->
 
                 <!-- 메타태그 이용하기 -->
 
                     <!--메타 태그는 페이지에 대한 기본 정보를 설정한다.  -->
 
                     <!-- 페이지의 기본 언어를 설정 -->
-                    <meta http-equiv = "content-languiage" content = "ko" />
+                    <meta http-equiv = "content-language" content = "ko" />
+                   
                     <!-- 페이지의 문자형식, 페이지 형식을 지정 -->
 
                     <meta http-equiv = "content-type" content = "text/html"; charset=utf-8 />
@@ -42,7 +55,7 @@
 
 
                 <!-- 페이지 자동으로 이동하는 옵션  -->
-                    <!-- <meta http-equiv = "refresh" content = "3;http://www.iei.or.kr"/> -->
+                    <meta http-equiv = "refresh" content = "3;http://www.iei.or.kr"/>
 
                     <!-- 이거 말고도 여러 가지 옵션값이 있으니까 찾아보는 걸로 합시다..책 볼게 하나 또 늘었네? -->
 
@@ -61,7 +74,7 @@
                         <!-- 인스타 태그 같은 녀석임 keyword는 -->
 
                 
-
+!
 
                 <!-- 반응형 적용 속성 -->
                         <meta name = "viewport" content = "width = device-width, initial-scale=1.0"/>

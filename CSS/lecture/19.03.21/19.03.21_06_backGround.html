@@ -148,14 +148,36 @@
          <div class="size2 imgsize2 fixed position"></div>
 
 
+         <h3> linear-gradient </h3>
+         <pre>
+            색상을 점진적으로 표현해주는 속성
+            background : linear-gradient(각도||방향, 시작색, 끝색);
+         </pre>
+
+         <div class="container2 gradient"></div>
+         <h4>중단점으로 여러 가지 색 동시에 + 반복적용</h4>
+         <div class="container2 gradient2"></div>
+
+    <hr>
+         <h3> gradient gradient</h3>
+         <div class="container2 radient"></div>
+         <h4>원형</h4>
 
 
 
 
-
-
-         `
+         
         <style>
+            .radient{
+                background:repeating-radial-gradient(circle closest-side, white 20%, gray 30%, silver 70%, black 90%)
+            }
+
+            .gradient2{
+                background:repeating-linear-gradient(180deg, rgb(206, 205, 205), black 15%,aqua 30%,purple 34%,royalblue,magenta 70%)
+            }
+            .gradient{
+                background:linear-gradient(180deg, rgb(206, 205, 205), black)
+            }
             .fixed{
                 background-attachment: fixed;
             }

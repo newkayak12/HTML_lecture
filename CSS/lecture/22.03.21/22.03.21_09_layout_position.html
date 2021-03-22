@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+</head>
+<body>
+    
+        <h2>positioning _ </h2>
+        <pre>
+            지금까지는 브라우저가 알아서 배치를 했는데... 포지셔닝은 내 맘대로??? 한다는....
+            box모델, inline모델을 페이지 상에서 배치하는 스타일 (elements자체를 내가 원하는 자리로 옮긴다.)
+            position속성과 float속성이 있다.
+
+            postion은 얘 혼자 쓰는게 아니다. > 좌표 값을 통해서 위치를 정해줘야햔다. (top,left,right,bottom)
+                static/ relative/ absolute/ fixed 등
+                static은 default, 나머지는 사용자 정의 (relative, absolute는 부모가 static이면 조금 골치 아픔)
+            
+
+        </pre>
+
+        <h3>position 속성</h3>
+        <pre>
+
+            태그를 원하는 위치에 배치하는 속성 값
+            position 속성은 위치를 지정하는 top, left, right, bottom 속성과 함께 사용함
+            position : static, relative, absolute, fixed
+
+            relative : 부모의 position이 static일 떄  마지막 static elements의 위치를 0,0으로 사용
+            absolute : 부모의 position이 static일 때 페이지의 0,0을 기준으로 삼는다.
+            fixed : 특정태그를 지정 위치에 고정해서 출력
+
+            부모가 relative/absolute이면 부모의 0,0이 시작지점이다. 
+        </pre>
+
+            <div id="container" class="basicposition">
+
+                <img class="basicposition" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS68enHn5wnG9W4QKUcbt_MYFxplPfwO4G8bg&usqp=CAU" alt="" width="100px" height="100px">
+                <div class="inner">
+            <!-- 부모가 relative면 자식이 absolute라도 부모 위치에서 시작 -->
+                </div>
+                d
+        </div>
+
+        <div class="basicabsolute">  absol
+            <div class="baiscabsolute">
+
+            </div>
+        </div>
+        <div class="basicposition2"> rela</div>
+
+        <h4>fixed</h4>
+        <!-- <div class="fixed"></div> -->
+        
+        <style>
+            .fixed{
+                width:200px;
+                height: 100px;
+                background-color: lime;
+                position: fixed;
+                top: 300px;
+                left: 50px;
+            }
+        </style>
+        
+
+        <style>
+            .inner{
+                position: absolute;
+                top: 100px;
+                left: 100px;
+                border: 1px purple solid;
+                width: 100px;
+                height: 100px;
+            }
+            .basicposition2{
+                position: relative;
+                top: 0px;
+                left: 0px;
+                border: blue solid;
+                width: 200;
+                height: 100;
+
+
+            }
+            .basicabsolute{
+                border: 1px lime solid;
+                width: 300px;
+                height: 200px;
+                position: absolute;
+                top: 200px;
+                left: 200px;
+            }
+            .basicposition{
+                /* position: absolute; */  
+                /* absolute는 페이지의 절대값 */
+                position: relative;
+                /* relative는 나머지 elements 고려해서 */
+                top: 200px;
+                left: 200px;
+
+
+            }
+            #container{
+                border: 1px red solid;
+                width: 500px;
+                height: 400px;
+            }
+        </style>
+
+    <hr><hr>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <div id="menu">
+            <header>
+                <div id="logo">
+                    <img src="https://iei.or.kr/resources/images/main/main_renewal/top_logo.jpg" alt="">
+                </div>
+
+                <div id="title">
+                    <h1>안녕하세요 kh정보 교육원입니다.</h1>
+                </div>
+                <span>
+                    <div id="login">
+                        <label> <input type="text" name="usrid"> id</label>
+                        <label> <input type="password" name="usrpw"> pw </label>
+                        <input type="submit" value="로그인">
+                        <input type="submit" value="취소">
+                    </div>
+                </span>
+
+            </header>
+
+        </div>
+
+        <style>
+            header>span{
+                
+                float: right;
+                margin-top: 40px;
+                padding-top: 30px;
+                width: auto;
+                height: auto;
+                position: relative;
+                display: inline-block;
+                top: 40px;
+                margin-right: 40px;
+            }
+            header{
+                height: 500px;
+                padding-top: 50px;
+            }
+            div#menu *{
+                /* border: 1px green solid; */
+                margin:  0 0 0 0;
+                padding: 0 0 0 0 ;
+            }
+
+            header>div{
+                display: inline-block;
+                margin-right: 10px;
+            }
+            div#logo{
+                float: left;
+                margin-left: 100px;
+                margin-right: 50px;
+            }
+            div#login>*{
+                margin-right: 60px;
+                display: block;
+
+            }
+        </style>
+        <hr>
+
+        <!-- 
+            visibility 는 원래 있던 자리를 남겨둔다.
+            display none은 자리를 남겨두지 않는다.
+            
+        -->
+        <h2>visibility</h2>
+        <pre>
+            태그를 표현할지 결정하는 태그
+
+        </pre>
+
+        <div id="target" class="test">div1</div>
+        <div class="test visibility">visibility</div>
+        <div class="test">div2</div>
+
+        <style>
+            .test{
+                border: 1px black solid;
+                width: 200px;
+                height: 100px;
+                
+            }
+            #target:hover+div{
+                visibility: visible;
+            }
+
+            .visibility{
+                visibility: hidden;
+                background-color: blueviolet;
+            }
+        </style>
+
+
+        <h2>Z-INDEX</h2>
+        <pre>
+            z축을 담당하는 녀석이라고 생각하면 된다... 레이어의 층을 나눌 때 쓴다.
+
+        </pre>
+
+        <h3>z-index활용</h3>
+        <div class = "zindex-container">
+            <div class="z1">div1</div>
+            <div class="z2">div2</div>
+            <div class="z3">div3</div>
+        </div>
+
+        <style>
+            div.zindex-container{
+                position: relative;
+                height: 400px;
+
+
+            }
+
+            div.zindex-container>div{
+                width: 100px;
+                height: 100px;
+                border: 1px darkgreen solid;
+
+            }
+
+            .z1{
+                background-color: whitesmoke;
+                position: absolute;
+                top: 10px;
+                left: 5px;
+                z-index: 100;
+            }
+            .z2{
+                background-color: lightsalmon;
+                position: absolute;
+                top: 40px;
+                left: 15px;
+                z-index: 999;
+            }
+            .z3{
+                background-color: lightseagreen;
+                position: absolute;
+                top: 70px;
+                left: 25px;
+                z-index: 1;
+            }
+        </style>
+
+
+            <h3>float 페이지 내 요소의 위치를 왼쪽이나 오른쪽으로 지정하는 속성</h3>
+            <pre>
+                기본 static position에서 벗어나 왼쪽/오른쪽 상단에 배치시키는 속성
+            </pre>
+
+            <div class="float-container">
+                <div class="left">left</div>
+                <div class="right">right</div>
+                <div class=""> basic </div>
+            </div>
+
+            <style>
+                .float-container>div:last-child{
+                    clear: both;
+                }
+
+                .right{
+                    float: right;
+                    margin-right: 2px;
+                    /*marginㄷh rksdmd */
+                }
+                .left{
+                    float: left;
+                    border:1px lime solid !important;
+                                                    /* bootstrp, 다른 라이브러리 가져와서 커스터마이징 할 때 !important사용 */
+                }
+                .float-container{
+                    width: 500px;
+                    height: 400px;
+                    border: 1px black solid;
+                }
+                .float-container>div{
+                    border: 1px magenta solid;
+                    width: 100px;
+                    height: 100px;
+                }
+            </style>
+
+
+
+            <h3>div를 수평 정렬하는 것</h3>
+            <pre>
+                display의 flex속성으로 수평정렬을 할 수 있다.
+                div를 모두 담는 부모 태그(eg. div)에 설정을 한다.
+                설정을 하면 자식 블록 속성 태그를 수평으로 정렬을 해준다.
+
+            </pre>
+
+            <div class="parent">
+                <div class="child">child1</div>
+                <div class="child">child2</div>
+                <div class="child">child3</div>
+                <div class="child">child4</div>
+                <!-- <div class="child">child5</div>
+                <div class="child">child6</div>
+                <div class="child">child7</div>
+                <div class="child">child8</div>
+                <div class="child">child9</div>
+                <div class="child">child10</div> -->
+
+            </div>
+
+            <style>
+                .c1{
+                    flex-grow: 0;
+                }
+                .c2{
+                    flex-grow: 2;
+                }
+                .c3{
+                    flex-grow: 0;
+                }
+                /* 꽉차게, flex-grow로 비율 주는 것 */
+
+
+
+                .child{
+                    width: 200px;
+                    height: 100px;
+                    border: 1px red solid;
+                }
+                .parent{    
+                    height: 400px;
+                    display: flex;
+                    border: 4px blue dotted;
+                    /* 중앙 정렬??? */
+                    /* justify-content: space-between; */  /*양쪽 정렬*/
+                    justify-content: space-around;
+                    align-items: center;
+                    /* flex를 수평이 아닌 수직으로? 
+                    
+                    
+                    
+                    교차축은 align-content: ;
+                    주축이 justify-content
+                    보조축이 align-content
+                    
+                    */ 
+                            /* flex-direction: column; */
+                    flex-direction: row;
+
+                    /* flex-wrap: wrap; */
+                    /* 부모 틀을 넘지 않은 선에서 래핑 */
+                    flex-wrap: nowrap;
+                }
+            </style>
+
+
+<!-- 반응형이라면 width값으로...(%을 준다던가..) height 값은 스크롤링하잖아.. -->
+</body>
+</html>

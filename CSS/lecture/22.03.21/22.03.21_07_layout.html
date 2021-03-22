@@ -1,0 +1,224 @@
+<!-- 
+
+    레이아웃?? : 배치, 포지셔닝
+    어떤 것의 배치?? 컴포넌트 (태그의 영역관련해서 위치시키는 것)
+    영역을 표시하는 것 div/ span/ 시맨틱 태그 ( <head> <selection> <article> <aside> <footer>)
+    이런 녀석들을 원하는 위치에 배치하는 것
+
+
+    html은 block, inline 밖에 없는데, css로 그 한계점을 조정하는
+    _ 원하는 위치에 놓는 것
+
+ -->
+
+ <!-- 
+     기본 스타일 _ layout은 영역을 배치하는 것 > 그러려면 크기가 있어야하지?
+     height, width = 높이, 폭 
+        _상대 크기 : 창의 크기  : 창이 줄면 같이 준다.
+        _절대 크기 : 고정 크기  : 그냥 고정된 사이즈로 창이 줄면 가려지는 식으로 출력
+
+        ✰ 반응형은 직접 찾아봐야하겠네...
+  -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>레이아웃 관련 속성</title>
+  </head>
+  <body>
+        <h1>태그 영역의 크기 설정하기</h1>
+        <pre>
+            각 태그의 대한 크기를 설정하는 속성
+            height : 높이 
+            width  : 너비 
+            단위 : px( 절대 크기 )/ % ( 상대 크기 )
+        </pre>
+        <br>
+        <h3 >절대 크기</h3>
+        <div class="container absize"></div>
+
+
+        <h3 >상대 크기</h3>
+        <div class="container resize"></div>
+
+        <style>
+            .container{
+                border: 1px red solid;
+            }
+            .absize{
+                height: 200px;
+                width: 900px;  /* 절대 크기 */
+            }
+            .resize{
+
+                height: 200px;
+                width: 70%;   /* 상대 크기 */
+                /* 이렇게 사이즈만 바뀐다고 반응형이 아니다. 해상도에 따라서 여러 메뉴들도 같이 줄어서 */
+
+            }
+        </style>
+
+        <!--
+
+            각 요소들을 필요에 의해서 배치 
+            태그 마다의 속성이 어떤 것이 있는지 알아야함
+            1. 블록 속성 : 한 개 페이지에서 한 라인을 모두 차지하는 것
+            2. 인라인 속성 : 한 라인 안에 속하게 만드는 것 (한 라인 안에 여러 가지가 들어감
+            
+            > 결론적으로 두 가지 속성은 개행의 여부이다.
+
+            그래서  css의 display의 속성으로 해당 기본 값을 바꿔준다. + 원하는 대로 배치한다.
+            == 박스 레벨과 인라인 레벨 요소를 변경 가능하게 해줌
+            : none/ block/ inline/ inline-block
+         -->
+
+         <h3>태그별 배치 속성</h3>
+         <pre>
+             태그별로 block 속성과 inline속성으로 구분된다.
+             간단하게 보면!
+                block은 개행이 되는 것
+                inline은 개행이 안 됨
+            
+                지금 쓰고 있는  h3 태그와 pre만 봐도 block을 알 수 있고
+         </pre>
+
+         <input type="text"> <input type="text">
+
+         <pre>
+             input만 봐도 inline을 알 수 있다.
+         </pre>
+
+         <h4>기본 div배치</h4>
+         <div class="container basicsize">기본 div1</div>
+         <div class="container basicsize">기본 div2</div>
+         <div class="container basicsize">기본 div3</div>
+         <br>
+
+
+         <h4>div의 block  속성을 inline으로 변경하기</h4>
+
+         <div class="container basicsize inline">기본 div1</div>
+         <div class="container basicsize inline">기본 div2</div>
+         <div class="container basicsize inline">기본 div3</div>
+         <!-- 
+             1. 사이즈 적용 안 되는거 봐라... = 글자를 기준으로  + 띄어쓰기(&nbsp;로 폭을...)
+             2. 사이즈가 글자 따라감...
+
+        -->
+
+        <h4>div의 block  속성을 inline-block으로 변경하기</h4>
+
+         <div class="container basicsize inline-blck">기본 div1</div>
+         <div class="container basicsize inline-blck">기본 div2</div>
+         <div class="container basicsize inline-blck">기본 div3</div>
+    <hr>
+        <h3>기본 span(inline)배치하기</h3>
+        <span class="container">span1</span>
+        <span class="container">span2</span>
+        <span class="container">span3</span>
+        
+
+        <h4>span(inline)을 block으로 바꾸기</h4>
+
+        <span class="container block basicsize">span1</span>
+        <span class="container block basicsize">span2</span>
+        <span class="container block basicsize">span3</span>
+
+
+        <h3>input태그를 block속성으로 변경</h3>
+        이름 : <input type="text" class = "block">
+        나이 : <input type="text" class = "block">
+        성별 : <input type="text" class = "block">
+        <!-- 
+            이름
+            창
+            나이
+            창
+            성별
+            창
+            이렇게 나와서... div로 묶는다구
+         -->
+         <br>
+         <div>
+           <div><h3 class="inline">이름 :</h3> <input type="text" ></div> 
+           <div><h3 class="inline">나이 :</h3> <input type="text" ></div> 
+           <div><h3 class="inline">성별 :</h3> <input type="text" ></div> 
+         </div>
+
+
+
+         <style>
+             .block{
+                 display: block;
+             }
+             .inline-blck{
+                 display: inline-block;
+                 /* 사이즈 적용 안 되던거 적용이 됨 */
+             }
+
+             .inline{
+                 display: inline;
+                 /* 사이즈 적용이 안 됨... 이 정보면 버그 아니냐? */
+             }
+             .basicsize{
+                 width: 300px;
+                 height: 200px;
+             }
+         </style>
+
+
+         <h3> 응용 ) 메뉴 만들기 </h3>
+         <nav>
+            <ul>
+                <li>게시판</li>
+                <li>자료실</li>
+                <li>갤러리</li>
+            </ul>
+
+         </nav>
+
+         <style>
+             ul>li{
+                 display: inline;
+             }
+         </style>
+
+         <!-- 이런식으로 구성하는 겁니다. -->
+
+         <h2>태그를 없애는 (숨기는) 것 : display의  none을 통해서</h2>
+         <pre>
+             
+            display 속성에서 none을 설정하면 html에서 해당 태그가 사라지는게 아니고
+            코드 상에서는 남아있지만 그 내그가 차지하고 있는 영역은 표시하지 않음
+
+         </pre>
+
+         <div id="target" class="container basicsize">div1</div>
+         <div class="container basicsize none">none div2</div>
+         <div class="container basicsize">div3</div>
+
+         <style>
+             .none{
+                 display: none;
+             }
+
+             /* #target:hover+div{
+                 display: block;
+                 background-color: thistle;
+             } */
+         </style>
+         <!-- <script>
+             let t= document.getElementbyId("target");
+             t.addEveentListener("click", (e) => {
+                 e.target.nextElementSibling.style.display = "block"; 
+                
+             });
+        </script> -->
+
+ㅌ
+
+  </body>
+  </html>
