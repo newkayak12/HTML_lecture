@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="SH" >
+    <meta name="generator" content="vscode">
+    <meta name="description" content="my page task">
+    <meta name="keywords" content="mypage, task, html5, css">
+    <title>나의 메인 페이지 작성</title>
+    <link rel="icon" type="image/x-icon" href="/Users/sanghyeonkim/Downloads/50Med3oI_400x400-2.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    
+    <!-- css따로 적용할까? -->
+    <link rel="stylesheet" href="">
+</head>
+<body>
+     
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="SH" >
+        <meta name="generator" content="vscode">
+        <meta name="description" content="my page task">
+        <meta name="keywords" content="mypage, task, html5, css">
+        <title>나의 메인 페이지 작성</title>
+        <link rel="icon" type="image/x-icon" href="/Users/sanghyeonkim/Downloads/50Med3oI_400x400-2.jpg">
+        <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+        
+        <!-- css따로 적용할까? -->
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="https://w7.pngwing.com/pngs/411/411/png-transparent-donald-duck-daisy-duck-mickey-mouse-minnie-mouse-donald-duck-heroes-vertebrate-donald-duck-thumbnail.png" alt="logo" width="150px" height="150px">
+            
+                <div>
+                    <p>과제로 만드는 페이지_ 도널드덕으로 도배를 할꺼야~</p>
+                </div>
+            </div>
+        </header>
+    
+        <!--  -------- -------- -------- -------- -------- -->
+        <nav>
+            <div class="menus" id="menunav">
+                <ul>
+                    <li><a href="../loginview/myp.html" class="link">Main</a></li>
+                    <li>Info</li>
+                    <li>Board</li>
+                    <li>Gallary</li>
+                    <li>Support</li>
+                    <li><a href="http://www.disney.co.kr/home/index.jsp"target="_blank" class="link" >WaltDisney</a></li>
+                    <li class="menudown"> =
+                        <ul id="down">
+                            <li><a href="" style="text-decoration: none; color: white">login</a></li>
+                            <li><a href="" style="text-decoration: none; color: white">menu2</a></li>
+                            <li><a href="" style="text-decoration: none; color: white;">menu3</a></li>
+                        </ul>
+                        
+                    </li>
+                    <!-- 드롭다운 메뉴 만들기 로그인/ 계정 설정 등 출력 -->
+                </ul>
+            </div>
+        </nav>
+        <!--  -------- -------- -------- -------- -------- -->
+        <section>
+                <div>
+                    <form action="../loginview/myp.html" method="POST">
+                        <div>
+                            
+                                    id&nbsp;&nbsp; : &nbsp;<input type="text" placeholder="id"><br>
+                            
+                                    pw : &nbsp;<input type="password">
+                            
+
+                            <input type="submit" value="로그인" >
+                        </div>
+                    </form>
+                </div>
+        </section>
+        <!--  -------- -------- -------- -------- -------- -->
+        <footer>
+    
+        </footer>
+    
+    
+        <style>
+           
+           
+           section>div{
+               border: 1px black solid;
+               position: absolute;
+               top: 60%;
+               right: 30%;
+               width: 500px;
+               height: 200px;
+               background-color: white;
+           }
+
+           section>div>form{
+               position: absolute;
+               top: 40%;
+               right: 30%;
+               color:black;
+               font-family: "Gugi";
+           }
+           section>div>form [type="submit"]{
+               color: black !important;
+           }
+           
+           section>div div div{
+               display: flex;
+               flex-direction: row;
+               border: 1px black solid;
+               height: 32px;
+               width: 240px;
+           }
+
+           section input{
+               color:black
+               
+           }
+           
+             
+            
+            @keyframes drop{
+    
+                from{
+                    display: none; 
+                    position: absolute;
+                    right: 10px;
+                }
+                to{
+                    display: block;
+                    position: absolute;
+                    right: 10px;
+                    top: 33%;
+                    font-size: 20px;
+                    padding: 0px;
+                    text-decoration: none;
+                }
+    
+                
+            }
+    
+            .menudown ul{
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 33%;
+                font-size: 20px;
+                padding: 0px 0px 0px 0px;
+                
+    
+            }
+    
+            .menudown:hover> ul li{
+                padding: 0px 0px 0px 0px;
+                animation-name: drop;
+                animation-duration: 0.5s;
+                display: block;
+                text-decoration: none;
+            }
+    
+    
+            .menudown>ul li{
+                display: none;
+                font-size: 40px  !important;
+                background-color: rgba(213, 0, 38,0.95);
+                height: 60px;
+                width: 150px;
+                text-align: center;
+                padding-top: 0px;
+                text-decoration: none;
+    
+            }
+            
+    
+            
+           
+           
+    
+            body{
+                background-image: url(data:image/png;base64,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);
+    
+            }
+            nav>div{
+                border: 1px solid black;
+                height: 80px;
+                display: flex;
+                flex-wrap: wrap;
+                background-color:rgb(243, 206, 14);
+                padding: 0px 0px 0px 0px;
+                margin-bottom: 0px;
+    
+                
+            }
+            header p{
+                margin-left: 100px;
+                color: whitesmoke;
+                font-family: "Gugi";
+                text-shadow: black 3px 3px 1px, black -3px -3px 1px;
+            }
+            nav ul{
+                display: flex;
+                flex-wrap: wrap;
+                list-style-type: none;
+                
+                
+            }
+    
+            nav li:last-of-type{
+                font-size: 50px;
+                text-shadow: black 3px 3px 1px, black -3px -3px 1px;
+                
+            }
+    
+    
+          
+    
+            nav li{
+                margin-left: 70px;
+                font-size: 40px;
+                color: white;
+                text-decoration: none;
+                font-family: "Gugi";
+                text-shadow: black 3px 3px 1px, black -3px -3px 1px;
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+            }
+    
+            nav li:hover{
+                color: silver;
+                text-shadow: black 3px 3px 1px, black -3px -3px 1px;
+                font-size: 42px;
+            }
+            li a:hover{
+                color: silver;
+                text-shadow: black 3px 3px 1px, black -3px -3px 1px;
+            }
+            .logo{
+                display: flex;
+                font-size: 50px;
+            }
+            #mainvideo{
+                margin-right: 80px;
+                margin-left: 70px;
+                margin-top: 80px;
+            }
+            .link{
+                text-decoration: none;
+                color: white;
+            }
+           
+            
+        </style>
+        
+    </body>
+    </html>
+
+
+ </body>   
+
+ </html>

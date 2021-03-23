@@ -30,13 +30,20 @@
     <nav>
         <div class="menus" id="menunav">
             <ul>
-                <li><a href="/CSS/task/loginview/myp.html]" class="link">Main</a></li>
+                <li><a href="../loginview/myp.html" class="link">Main</a></li>
                 <li>Info</li>
                 <li>Board</li>
                 <li>Gallary</li>
                 <li>Support</li>
                 <li><a href="http://www.disney.co.kr/home/index.jsp"target="_blank" class="link" >WaltDisney</a></li>
-                <li><a href="" class="link"> drop </a></li>
+                <li class="menudown"> =
+                    <ul id="down">
+                        <li><a href="../loginview/login.html" style="text-decoration: none; color: white">login</a></li>
+                        <li><a href="" style="text-decoration: none; color: white">menu2</a></li>
+                        <li><a href="" style="text-decoration: none; color: white;">menu3</a></li>
+                    </ul>
+                    
+                </li>
                 <!-- 드롭다운 메뉴 만들기 로그인/ 계정 설정 등 출력 -->
             </ul>
         </div>
@@ -58,44 +65,49 @@
                        </tr>
                         <tr>
                             <td>영문명</td>
-                            <td>Donals Duck</td>
+                            <td>Donald Duck, Donald Fauntleroy Duck(풀네임)</td>
                         </tr>
                         
                         <tr>
-                            <th></th>
-                            <td>3</td>
-                            <td>1</td>
+                            <th>국적</th>
+                            <td colspan="2">미국</td>
                         </tr>
                         
                         <tr>
-                            <th></th>
-                            <td>4</td>
-                            <td>1</td>
+                            <th>생년월일</th>
+                            <td colspan="2"><p><abbr title="(86세)">1934년 6월 9일</abbr></p></td>
                         </tr>
                         <tr>
-                            <th></th>
-                            <td>5</td>
-                            <td>1</td>
+                            <th>직업</th>
+                            <td colspan="2"><a href="https://namu.wiki/w/배우">배우</a>, 군인, 농부</td>
                         </tr>
                         <tr>
-                            <th></th>
-                            <td>6</td>
-                            <td>1</td>
+                            <th>소속</th>
+                            <td colspan="2">미합중국 육군 > 미합중국 해군</td>
                         </tr>
                         <tr>
-                            <th></th>
-                            <td>7</td>
-                            <td>1</td>
+                            <th>연인</th>
+                            <td colspan="2"><a href="https://namu.wiki/w/데이지%20덕">데이지 덕</a></td>
                         </tr>
                         
                        
                    </table>
+
+                   <!-- <div class="side" id="aside">
+                        <ul>
+                            <li><a href="" id="login">login</a></li>
+                            <li><a href="">myinfo</a></li>
+                            <li></li>
+                        </ul>
+                   </div> -->
                 </div>
-            
+            <div class="movedMenu"></div>
             <!-- 설명충 등판 -->
         </div>
         
     </section>
+
+    
     <!--  -------- -------- -------- -------- -------- -->
     <footer>
 
@@ -103,11 +115,137 @@
 
 
     <style>
+       
+       
+       
+        /* #aside{
+            background-color: rgba(213, 0, 38,0.95);
+            width: 200px;
+            height: fit-content;
+            position: absolute; */
+            /* right: 10px; */
+            /* bottom: 245px; */
+
+            /* right: 0.6%;
+            bottom: 32.3%;
+            box-shadow: 2px 2px 2px black, 0px -2px 2px black;
+            z-index: 999;
+            display: none;
+
+        } */
+        
+       
+         
+        
+        @keyframes drop{
+
+            from{
+                display: none; 
+                position: absolute;
+                right: 10px;
+            }
+            to{
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 33%;
+                font-size: 20px;
+                padding: 0px;
+                text-decoration: none;
+            }
+
+            
+        }
+
+        .menudown ul{
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 33%;
+            font-size: 20px;
+            padding: 0px 0px 0px 0px;
+            
+
+        }
+
+        .menudown:hover> ul li{
+            padding: 0px 0px 0px 0px;
+            animation-name: drop;
+            animation-duration: 0.5s;
+            display: block;
+            text-decoration: none;
+        }
+
+
+        .menudown>ul li{
+            display: none;
+            font-size: 40px  !important;
+            background-color: rgba(213, 0, 38,0.95);
+            height: 60px;
+            width: 150px;
+            text-align: center;
+            padding-top: 0px;
+            text-decoration: none;
+
+        }
+        
+
+        
+       
+        /* @keyframes box{
+            from{
+                position: absolute;
+                right: 0%;
+                bottom: 32.3%;
+            }
+            to{
+                position: absolute;
+                right: 0.6%;
+                bottom: 32.3%;
+            }
+        }
+
+        
+
+        #aside li{
+            border: 1px black solid;
+            height: 80px;
+            width: 200px;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            list-style: none;
+            
+        }
+
+        #aside ul{
+            margin-left: -35px;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        } */
+/* 위키 백과 */
         #wiki{
             width: 560px;
             height: 315px;
             margin-top: 80px;
             margin-left: 70px;
+            background-color: white;
+            border: 1px black solid;
+            border-collapse: collapse;
+            table-layout: fixed;
+            
+        }
+
+        #wiki td{
+            border: 1px black solid;
+            text-align: center;
+        }
+
+        #wiki th{
+            border: 1px black solid;
+            background-color: black;
+            text-align: center;
+            color: white;
+            width: 80px;
         }
 
         #section>#contentView{
@@ -122,15 +260,20 @@
         }
         nav>div{
             border: 1px solid black;
-            height: fit-content;
+            height: 80px;
             display: flex;
             flex-wrap: wrap;
+            background-color:rgb(243, 206, 14);
+            padding: 0px 0px 0px 0px;
+            margin-bottom: 0px;
+
             
         }
         header p{
             margin-left: 100px;
             color: whitesmoke;
             font-family: "Gugi";
+            text-shadow: black 3px 3px 1px, black -3px -3px 1px;
         }
         nav ul{
             display: flex;
@@ -140,16 +283,34 @@
             
         }
 
+        nav li:last-of-type{
+            font-size: 50px;
+            text-shadow: black 3px 3px 1px, black -3px -3px 1px;
+            
+        }
+
+
+      
+
         nav li{
             margin-left: 70px;
             font-size: 40px;
             color: white;
             text-decoration: none;
             font-family: "Gugi";
+            text-shadow: black 3px 3px 1px, black -3px -3px 1px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
         }
 
-        nav li~a:hover{
+        nav li:hover{
             color: silver;
+            text-shadow: black 3px 3px 1px, black -3px -3px 1px;
+            font-size: 42px;
+        }
+        li a:hover{
+            color: silver;
+            text-shadow: black 3px 3px 1px, black -3px -3px 1px;
         }
         .logo{
             display: flex;
@@ -164,6 +325,7 @@
             text-decoration: none;
             color: white;
         }
+       
         
     </style>
     
