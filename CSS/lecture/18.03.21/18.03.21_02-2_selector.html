@@ -69,6 +69,7 @@
 
     <h3>문자 선택자 </h3>
     <pre>
+        
         ::first-letter : 첫 번째 글자만 style 적용하기
         ::first-line   : 첫 번째 한 줄만 style 적용하기
         ::after        : 태그의 끝 문장에 문자 추가(내용 추가)
@@ -140,29 +141,35 @@
     </div>
 
     <style>
-        h5:first-child{  /* 구조에서 h5가 첫번째로 나오는 녀석을 찾는다  ... 첫 번째인 h5를 찾는게 아니라  */
+        /* 구조에서 h5가 첫번째로 나오는 녀석을 찾는다  ... 첫 번째인 h5를 찾는게 아니라  */
+         /* h5:first-child{  
             background-color: magenta;
-        }
-        h5:last-child{ /* 똑같다. h5가 마지막으로 나오는 녀석을 찾는다. 마지막인 h5를 찾는게 아니라 */
+        } */
+
+
+/* 똑같다. h5가 마지막으로 나오는 녀석을 찾는다. 마지막인 h5를 찾는게 아니라 */
+        /* h5:last-child{ 
             background-color: blue;
-        }
+        } */
 
-        h5:nth-child(3){ /* 숫자는 구조에서 카운팅이야 그래서 p가1 번째 h5가 2이런식으로 */
+ /* 숫자는 구조에서 카운팅이야 그래서 p가1 번째 h5가 2이런식으로 */
+        /* h5:nth-child(3){
             background-color: lightgoldenrodyellow;
-        }
+        } */
 
-        h5:nth-child(2n){ /* 얘는 배수인 녀석을 찾는다.*/
+/* 얘는 배수인 녀석을 찾는다.*/
+        /* h5:nth-child(2n){ 
             background-color:darkorange;
-        }
+        }  */
 
 
-        /* 첫번째 div중에서 그 안의 div중에서 하고 싶다.
-        
+        /* 첫번째 div중에서 그 안의 div중에서 하고 싶다. */
+/*         
         first-of-type
         last-of-type
-        nth-of-type
-        */
-        h5:first-of-type{
+        nth-of-type */
+        
+         h5:first-of-type{
             background-color: darkmagenta;
         }
         h5:last-of-type{

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴만들어보기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>main</li>
+                <li>board</li>
+                <li>gallary</li>
+                <li>warehouse</li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <style>
+        header>nav>ul>li{
+            background-color: green;
+            display: inline-block;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: "Gugi";
+            padding: 20px;
+            color: whitesmoke;
+            cursor: pointer;
+
+        }
+
+        @keyframes mov{
+                from{
+                    transform: translateX(3px);
+                    color: lightgray;
+                    font-size: 36px;
+                    text-decoration: underline;
+                }
+                to{
+                    transform: translateX(-3px);
+                    color: whitesmoke;
+                    font-size: 36px;
+                    text-decoration: underline;
+                }
+        }
+
+        header>nav li:hover{
+            animation: mov 0.3s infinite alternate;
+        }
+    </style>
+
+    <!-- CSS끝....! -->
+</body>
+</html>

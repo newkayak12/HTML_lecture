@@ -40,6 +40,9 @@
                 <img class="basicposition" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS68enHn5wnG9W4QKUcbt_MYFxplPfwO4G8bg&usqp=CAU" alt="" width="100px" height="100px">
                 <div class="inner">
             <!-- 부모가 relative면 자식이 absolute라도 부모 위치에서 시작 -->
+
+
+            <!-- 여기까지 정리 -->
                 </div>
                 d
         </div>
@@ -241,14 +244,14 @@
                 position: absolute;
                 top: 10px;
                 left: 5px;
-                z-index: 100;
+                z-index: 999;
             }
             .z2{
                 background-color: lightsalmon;
                 position: absolute;
                 top: 40px;
                 left: 15px;
-                z-index: 999;
+                z-index: 50;
             }
             .z3{
                 background-color: lightseagreen;
@@ -277,9 +280,11 @@
                 }
 
                 .right{
+                    /* float: 20px; */
                     float: right;
                     margin-right: 2px;
                     /*marginㄷh rksdmd */
+                    margin: 20px 20px 0 0 ;
                 }
                 .left{
                     float: left;
@@ -353,7 +358,7 @@
                     
                     
                     
-                    교차축은 align-content: ;
+                    
                     주축이 justify-content
                     보조축이 align-content
                     

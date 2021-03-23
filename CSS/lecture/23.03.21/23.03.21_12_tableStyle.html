@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>table style</title>
+    </head>
+
+    <body>
+            <h3>table style</h3>
+            <pre>
+                caption-side : 테이블 캡션에 대한 위치를 지정하는 속성
+                    : captionside
+                border-collapse :
+                border-spacing : border-collpase가 seperate로 지정됐을 때 가능
+                empty-cells : 
+                table-layout : 길이가 길어졌을 때 자동으로 사이즈가 조정되는데 이 사이즈를 고정시키거나하는
+                text-align  : 수평정렬
+                vertical-align : 수직정렬
+            </pre>
+        <hr>
+
+            <table class="table">
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>abcdefghialksdj;asdlfkjasdf</td>
+                    <!-- 이러면 글자 맞춰서 사이즈가 변해버리는데...?
+                    그러면 다른 애들도 영향을 받지 -->
+                </tr>
+            </table>
+
+
+            <style>
+                .table{
+                    width: 300px;
+                    height: auto;
+                    border: 1px blue dotted;
+                    /* 얘는 테이블에 대한 border */
+
+
+                    /* border-collapse: collapse; */
+
+
+
+
+
+                    /* 이 밑은 seperate일 떄만 적용 */
+                    
+                    border-collapse: separate;
+                    border-spacing: 20px;
+                    /* 벌어진 틈 사이 사이즈 */
+
+
+                    /* 값을 지우면 없는 값으로 나오죠? */
+                    empty-cells: hide;
+                    /* 아예 칸을 날려버린다.
+                    단 seperate로 설정 되어 있을 떄 */
+
+
+                    /* 여기까지 seperate일 때만 적용 */
+
+
+
+
+                    table-layout: fixed;
+                    /* 이러면 테이블이 고정인데 문자가 삐져나감 */
+                    word-break: break-all;
+                    /* 이러면 테이블 안으로 강제로 넣는데... height값이 바뀌네 */
+                }
+
+
+
+                .table td{
+                    border: 1px darkgreen solid;
+                    /* 
+                        그어진 선이 td당 하나라 보이기엔 이중 선처럼 보임 
+                        border-collapse로 하나로 뭉쳐주기
+                    */
+
+
+                    text-align: center;
+                    /* 일괄적으로 center를 준다.
+                    이렇게 하면 이 안에 있는 태그도 정렬이 가능하다. */
+                    vertical-align: bottom;
+                    /* 수직 정렬 */
+
+                    width: 50px;
+                    height: 70px;
+
+                }
+
+            </style>
+    </body>
+</html>

@@ -1,12 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>border</title>
-</head>
-<body>
-    
-</body>
+    <html lang="en">
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>border style</title>
+
+    </head>
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+    <body>
+        <h2>테두리 스타일</h2>
+            <pre>
+                각 elements는 border/ padding/ content로 나눌 수 있다고 했어요
+                테두리 스타일은 그 border를 어떻게 표시할 것이냐에 대한 얘기
+                border-style : none/hidden/dashed/dotted/double/groove/inset/ouset/ridge/solid
+                border-radius : 테두리 곡률
+            </pre>
+        <hr>
+
+            <h3>태그 테두리에 스타일 적용하기</h3>
+                <div id="container">
+                    <div class="none">none(default)</div>
+                    <div class="dashed">dashed</div>
+                    <div class="dotted">dotted</div>
+                    <div class="double">double</div>
+                    <div class="groove">groove</div>
+                    <div class="inset">inset</div>
+                    <div class="outset">outset</div>
+                    <div class="ridge">ridge</div>
+                    <div class="solid">solid</div>
+                    <div class="complex">complex</div>
+                    <div class="all">all</div>
+                </div>
+                <br>
+
+                <style>
+                    .all{
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        height: 50px;
+                        width: 100px;
+                        border: 2px yellow inset;
+                    }
+
+                    .complex{
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        height: 50px;
+                        width: 100px;
+                        border-top: 2px red solid;
+                        border-right: 1px aqua dotted;
+                        border-left: 3px black outset;
+                        border-bottom: 6px rosybrown inset;
+
+                    }
+                    .none{
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        height: 50px;
+                        width: 100px;
+                    }
+                    .dashed{
+                        border-style:dashed ;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        height: 50px;
+                        width: 100px;
+                        border-width: 2px;
+
+                    }
+                    .dotted{
+                        border-style: dotted;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        height: 50px;
+                        width: 100px;
+                        border-width: 2px;
+                    }
+                    .double{
+                        border-style: double;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        height: 50px;
+                        width: 100px;
+                        border-width: 2px;
+                    }
+                    .groove{
+                        border-style: groove;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        height: 50px;
+                        width: 100px;
+                        border-width: 2px;
+                    }
+                    .inset{
+                        border-style: inset;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        height: 50px;
+                        width: 100px;
+                    }
+                    .outset{
+                        border-style: outset;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        height: 50px;
+                        width: 100px;
+                        border-width: 2px;
+                    }
+                    .ridge{
+                        border-style: ridge;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        height: 50px;
+                        width: 100px;
+                        border-width: 2px;
+                    }
+                    .solid{
+                        border-style: solid ;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        height: 50px;
+                        width: 100px;
+                        border-width: 2px;
+                    }
+                    #container{
+                        display:flex;
+                        flex-wrap: wrap;
+                        width: fit-content;
+                        height: fit-content;
+                        
+                    }
+                
+                </style>
+        <hr>
+
+            <h3>다단 스타일</h3>
+                <pre>
+                    column-width 다단 사이의 간격을 너비로 구한다.
+                       :   접두사 - column-width(count) : 숫자(단위) or auto
+                    column-gap 
+                    column-rule 다단 사이의 효과를 주는 속성
+                    column-span 다단을 합치는 것
+                </pre>
+
+
+                <!-- 끝인줄 알았는데 다시 돌아와서 해서... 흐름에 안 맞을수도 있다. -->
+
+            <h3>box-shadow</h3>
+                <pre>
+                    box-shadow 
+
+                </pre>
+                <div class="boxshadow">
+                    태그에 테두리 그림자 넣기
+                </div>
+
+                <style>
+                    .boxshadow {
+                        
+                        width:100px;
+                        height: 50px;
+                        border: 1px rebeccapurple solid;
+                        /* 이것 떄문에 돌아왔다. */
+                        box-shadow:gray 8px 2px 5px , royalblue -6px -8px 2px;
+                        /* 색 가로 세로 번짐*/
+
+                    }
+
+                </style>
+
+                
+    </body>
 </html>
